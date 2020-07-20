@@ -1,0 +1,21 @@
+.product-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--align {
+    align-self: center;
+  }
+}
+.product-flex__title {
+  a {
+    color: #111111;
+
+    &:hover {
+      color: #444444;
+    }
+
+    &:active {
+      color: hsla(0, 0%, 27%, 0.6);
+    }
+  }
+}
