@@ -8,12 +8,46 @@
 </head>
 <body>
 <div class="content-wrapper">
-  <header class="header"></header>
+  <header class="header">
+    <nav class="main-nav">
+      <ul class="main-nav__nav-list site-list">
+        <li class="site-list__item"><a href="">Информация</a></li>
+        <li class="site-list__item">
+          <a href="">Каталог</a>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="#coats" class="nav-list__item-link">Верхняя одежда</a>
+              <ul class="nav-list__submenu">
+                <li class="nav-list__submenu-link"><a href="#">Пуховики</a></li>
+                <li class="nav-list__submenu-link"><a href="#">Куртки</a></li>
+              </ul>
+            </li>
+            <li class="nav-list__item">
+              <a href="#pants" class="nav-list__item-link">Штаны</a>
+              <ul class="nav-list__submenu">
+                <li class="nav-list__submenu-link"><a href="#">Джинсы</a></li>
+                <li class="nav-list__submenu-link"><a href="#">Брюки</a></li>
+              </ul>
+            </li>
+            <li class="nav-list__item">
+              <a href="#pants" class="nav-list__item-link">Водолазки и рубашки</a>
+              <ul class="nav-list__submenu">
+                <li class="nav-list__submenu-link"><a href="#">Водолазки</a></li>
+                <li class="nav-list__submenu-link"><a href="#">Рубашки</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="site-list__item"><a href="">Отзывы</a></li>
+        <li class="site-list__item"><a href="">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
   <main class="main">
     <h1 class="visually-hidden">Решение по ТЗ</h1>
     <section class="flex">
       <h2 class="flex__title title">Сетка каталога - flexbox</h2>
-      <div lass="catalog-flex">
+      <div сlass="catalog-flex" id="catalog">
         <ul class="catalog-flex__row">
           <li class="product-flex product-flex--align">
             <h3 class="product-flex__title product-title"><a href="product-flex.html">Cумка</a></h3>

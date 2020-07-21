@@ -1,0 +1,33 @@
+.nav-list {
+  background-color: #6b6868;
+  position: absolute;
+  min-width: 200px;
+  top: 38px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  @include list-reset;
+}
+
+.nav-list__item {
+  @include nav-text;
+  margin: 0;
+  padding: 0;
+  background: #6b6868;
+  a {
+    display: flex;
+    padding: 10px;
+  }
+}
+
+.nav-list__submenu {
+  display: flex;
+  flex-direction: column;
+  @include list-reset;
+}
+
+.nav-list__submenu-link {
+  background-color: #68b738;
+  @include nav-text;
+}
+

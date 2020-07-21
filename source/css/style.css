@@ -348,9 +348,92 @@ input[type="radio"],
   overflow: hidden; }
 
 .header {
-  min-height: 70px;
-  background-color: #669ec0;
+  background-color: #444444;
   margin-bottom: 20px; }
+
+.site-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 8%; }
+
+.site-list__item {
+  padding: 10px 0; }
+  .site-list__item a {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #cdcdcd; }
+    .site-list__item a:hover {
+      color: rgba(204, 204, 204, 0.6); }
+    .site-list__item a:active {
+      color: rgba(204, 204, 204, 0.3); }
+
+.nav-list {
+  background-color: #6b6868;
+  position: absolute;
+  min-width: 200px;
+  top: 38px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.nav-list__item {
+  margin: 0;
+  padding: 0;
+  background: #6b6868; }
+  .nav-list__item a {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #cdcdcd; }
+    .nav-list__item a:hover {
+      color: rgba(204, 204, 204, 0.6); }
+    .nav-list__item a:active {
+      color: rgba(204, 204, 204, 0.3); }
+  .nav-list__item a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px; }
+
+.nav-list__submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.nav-list__submenu-link {
+  background-color: #68b738; }
+  .nav-list__submenu-link a {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #cdcdcd; }
+    .nav-list__submenu-link a:hover {
+      color: rgba(204, 204, 204, 0.6); }
+    .nav-list__submenu-link a:active {
+      color: rgba(204, 204, 204, 0.3); }
 
 .title {
   font-size: 36px;
