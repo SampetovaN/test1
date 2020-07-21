@@ -8,7 +8,6 @@
     "autoprefixer": "9.5.x",
     "browser-sync": "^2.26.10",
     "del": "^5.1.0",
-    "eclint": "^2.8.1",
     "gulp": "4.0.x",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
@@ -23,16 +22,10 @@
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "postcss-scss": "^2.1.1",
-    "posthtml-include": "^1.4.3",
-    "stylelint": "^10.1.0",
-    "stylelint-config-htmlacademy": "0.1.x",
-    "stylelint-config-standard": "^20.0.0"
+    "posthtml-include": "^1.4.3"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
-    "fix": "eclint fix source/sass/blocks/*.scss source/js/*.js",
     "build": "gulp css",
     "start": "gulp start"
   },
@@ -51,6 +44,5 @@
   ],
   "engines": {
     "node": "8.16"
-  },
-  "dependencies": {}
+  }
 }

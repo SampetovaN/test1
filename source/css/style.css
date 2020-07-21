@@ -323,6 +323,10 @@ body {
 a {
   text-decoration: none; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .content-wrapper {
   width: 1200px;
   margin: 0 auto; }
@@ -348,12 +352,19 @@ input[type="radio"],
   background-color: #669ec0;
   margin-bottom: 20px; }
 
-.flex__title {
+.title {
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px; }
+
+.product-title a {
+  color: #111111; }
+  .product-title a:hover {
+    color: #444444; }
+  .product-title a:active {
+    color: rgba(69, 69, 69, 0.6); }
 
 .catalog-flex {
   display: -webkit-box;
@@ -396,12 +407,86 @@ input[type="radio"],
     -ms-flex-item-align: center;
         align-self: center; }
 
-.product-flex__title a {
-  color: #111111; }
-  .product-flex__title a:hover {
-    color: #444444; }
-  .product-flex__title a:active {
-    color: rgba(69, 69, 69, 0.6); }
+.catalog-inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 0 8%;
+  margin-bottom: 20px; }
+
+.product-inline {
+  width: 247px;
+  display: inline-block;
+  text-align: center;
+  margin-left: -.36em;
+  background-color: #68b738; }
+  .product-inline:nth-child(4n+1) {
+    margin-left: 0; }
+
+.product-inline__link {
+  display: block; }
+
+.catalog-float {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  padding: 0 5%; }
+  .catalog-float::after {
+    display: table;
+    clear: both;
+    content: ''; }
+
+.product-float {
+  float: left;
+  width: calc((100% - 20px * 4) / 4);
+  margin-right: 10px;
+  margin-left: 10px; }
+
+.product-float__title {
+  text-align: center; }
+
+.product-float__link {
+  display: block; }
+
+.catalog-table {
+  margin-bottom: 20px;
+  width: 100%; }
+
+.product-table {
+  margin-bottom: 20px; }
+
+.product-table__title {
+  text-align: center; }
+
+.product-table__link {
+  display: block; }
+
+.product-table__image {
+  width: 100%; }
+
+.catalog-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px; }
+
+.product-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .footer {
   min-height: 90px;

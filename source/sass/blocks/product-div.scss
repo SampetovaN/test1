@@ -1,9 +1,5 @@
-.product-flex {
+.product-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  &--align {
-    align-self: center;
-  }
 }
-

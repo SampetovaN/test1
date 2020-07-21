@@ -1,7 +1,7 @@
 .catalog-flex {
   display: flex;
   flex-direction: column-reverse;
-  margin-bottom: 20px;
+  margin-bottom: $margin-bottom;
 }
 .catalog-flex__row {
   @include list-reset;
