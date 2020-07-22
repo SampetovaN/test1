@@ -10,31 +10,19 @@
 <div class="content-wrapper">
   <header class="header">
     <nav class="main-nav">
-      <ul class="main-nav__nav-list site-list">
+      <ul class="main-nav__catalog-list site-list">
         <li class="site-list__item"><a href="">Информация</a></li>
-        <li class="site-list__item">
-          <a href="">Каталог</a>
-          <ul class="nav-list">
-            <li class="nav-list__item">
-              <a href="#coats" class="nav-list__item-link">Верхняя одежда</a>
-              <ul class="nav-list__submenu">
-                <li class="nav-list__submenu-link"><a href="#">Пуховики</a></li>
-                <li class="nav-list__submenu-link"><a href="#">Куртки</a></li>
-              </ul>
+        <li class="site-list__item site-list__item--catalog">
+          <a href="" tabindex="0">Каталог</a>
+          <ul class="catalog-list">
+            <li class="catalog-list__item">
+              <a href="#coats" class="catalog-list__item-link catalog-list__item-link--coats" tabindex="0">Верхняя одежда</a>
             </li>
-            <li class="nav-list__item">
-              <a href="#pants" class="nav-list__item-link">Штаны</a>
-              <ul class="nav-list__submenu">
-                <li class="nav-list__submenu-link"><a href="#">Джинсы</a></li>
-                <li class="nav-list__submenu-link"><a href="#">Брюки</a></li>
-              </ul>
+            <li class="catalog-list__item">
+              <a href="#pants" class="catalog-list__item-link catalog-list__item-link--pants" tabindex="0">Штаны</a>
             </li>
-            <li class="nav-list__item">
-              <a href="#pants" class="nav-list__item-link">Водолазки и рубашки</a>
-              <ul class="nav-list__submenu">
-                <li class="nav-list__submenu-link"><a href="#">Водолазки</a></li>
-                <li class="nav-list__submenu-link"><a href="#">Рубашки</a></li>
-              </ul>
+            <li class="catalog-list__item">
+              <a href="#shirts" class="catalog-list__item-link catalog-list__item-link--shirts" tabindex="0">Водолазки и рубашки</a>
             </li>
           </ul>
         </li>
@@ -335,7 +323,15 @@
       </div>
     </section>
   </main>
+  <template id="submenu">
+    <ul class="catalog-list__submenu">
+      <li class="catalog-list__submenu-link"><a href="#"></a></li>
+    </ul>
+  </template>
   <footer class="footer"></footer>
 </div>
+<script src="js/data.js"></script>
+<script src="js/submenu.js"></script>
+<script src="js/navigation.js"></script>
 </body>
 </html>

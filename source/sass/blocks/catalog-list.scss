@@ -1,4 +1,4 @@
-.nav-list {
+.catalog-list {
   background-color: #6b6868;
   position: absolute;
   min-width: 200px;
@@ -9,7 +9,7 @@
   @include list-reset;
 }
 
-.nav-list__item {
+.catalog-list__item {
   @include nav-text;
   margin: 0;
   padding: 0;
@@ -20,13 +20,13 @@
   }
 }
 
-.nav-list__submenu {
+.catalog-list__submenu {
   display: flex;
   flex-direction: column;
   @include list-reset;
 }
 
-.nav-list__submenu-link {
+.catalog-list__submenu-link {
   background-color: #68b738;
   @include nav-text;
 }

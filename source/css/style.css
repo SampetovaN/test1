@@ -374,8 +374,10 @@ input[type="radio"],
       color: rgba(204, 204, 204, 0.6); }
     .site-list__item a:active {
       color: rgba(204, 204, 204, 0.3); }
+  .site-list__item--catalog {
+    position: relative; }
 
-.nav-list {
+.catalog-list {
   background-color: #6b6868;
   position: absolute;
   min-width: 200px;
@@ -392,26 +394,26 @@ input[type="radio"],
   margin: 0;
   padding: 0; }
 
-.nav-list__item {
+.catalog-list__item {
   margin: 0;
   padding: 0;
   background: #6b6868; }
-  .nav-list__item a {
+  .catalog-list__item a {
     font-size: 16px;
     line-height: 16px;
     font-weight: bold;
     color: #cdcdcd; }
-    .nav-list__item a:hover {
+    .catalog-list__item a:hover {
       color: rgba(204, 204, 204, 0.6); }
-    .nav-list__item a:active {
+    .catalog-list__item a:active {
       color: rgba(204, 204, 204, 0.3); }
-  .nav-list__item a {
+  .catalog-list__item a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 10px; }
 
-.nav-list__submenu {
+.catalog-list__submenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,16 +425,16 @@ input[type="radio"],
   margin: 0;
   padding: 0; }
 
-.nav-list__submenu-link {
+.catalog-list__submenu-link {
   background-color: #68b738; }
-  .nav-list__submenu-link a {
+  .catalog-list__submenu-link a {
     font-size: 16px;
     line-height: 16px;
     font-weight: bold;
     color: #cdcdcd; }
-    .nav-list__submenu-link a:hover {
+    .catalog-list__submenu-link a:hover {
       color: rgba(204, 204, 204, 0.6); }
-    .nav-list__submenu-link a:active {
+    .catalog-list__submenu-link a:active {
       color: rgba(204, 204, 204, 0.3); }
 
 .title {
