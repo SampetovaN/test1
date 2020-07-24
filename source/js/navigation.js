@@ -2,10 +2,11 @@
 
 (function () {
   var HIDDEN = 'visually-hidden';
+  var SUBMENU = '.catalog-list__submenu';
   var catalog = document.querySelector('.site-list__item--catalog a');
   var catalogList = document.querySelector('.catalog-list');
   catalogList.classList.add(HIDDEN);
-  var onCatalogListItemClick = function (evt) {
+  var onCatalogListClick = function (evt) {
     evt.preventDefault();
     var target = evt.target;
     var targetParent = target.parentNode;
@@ -16,21 +17,34 @@
         }
       }
     };
-    var currentSubmenu = targetParent.querySelector('.catalog-list__submenu');
+    var currentSubmenu = targetParent.querySelector(SUBMENU);
     if (currentSubmenu) {
       window.submenu.remove(currentSubmenu);
     } else {
       window.submenu.render(targetParent, findProducts())
     }
   };
-  var toggleEventListener = function (element, onClickFunction) {
-    element.classList.contains(HIDDEN) ? element.removeEventListener('click', onClickFunction) : element.addEventListener('click', onClickFunction);
-  }
-  var onCatalogClick = function (evt) {
+  var removeListeners = function () {
+    catalogList.removeEventListener('click', onCatalogListClick);
+  };
+  var addListeners = function () {
+    catalogList.addEventListener('click', onCatalogListClick);
+  };
+  var isCatalogHidden = function () {
+    return catalogList.classList.contains(HIDDEN);
+  };
+  var removeCatalogList = function () {
+    document.querySelectorAll(SUBMENU).forEach(window.submenu.remove);
+  };
+  var toggleEventListener = function () {
+    isCatalogHidden() ? removeListeners() : addListeners();
+  };
+  catalog.addEventListener('click', function (evt) {
     evt.preventDefault();
     catalogList.classList.toggle(HIDDEN);
-    toggleEventListener(catalog, onCatalogClick);
-    toggleEventListener(catalogList, onCatalogListItemClick);
-  };
-  catalog.addEventListener('click', onCatalogClick);
+    toggleEventListener();
+    if (isCatalogHidden()) {
+      removeCatalogList();
+    }
+  });
 })();

@@ -4,11 +4,11 @@
   "private": true,
   "description": "Тестовое задание 1",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "^2.26.10",
     "deep-extend": "^0.6.0",
     "del": "^5.1.0",
+    "editorconfig": "^0.15.3",
     "gulp": "4.0.x",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
@@ -27,8 +27,7 @@
     "posthtml-include": "^1.4.3"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "build": "gulp css",
+    "build": "gulp build",
     "start": "gulp start"
   },
   "browserslist": [
