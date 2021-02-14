@@ -25,6 +25,7 @@
     return submenuClone;
   };
   var removeElement = function (element) {
+    //тут будет хорошо 
     element.remove();
   };
   var renderSubmenu = function (container, products) {
