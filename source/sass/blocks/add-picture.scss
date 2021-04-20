@@ -1,0 +1,97 @@
+.add-picture {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-left: 22px;
+  box-sizing: border-box;
+  min-width: 700px;
+  max-width: 1000px;
+  flex-shrink: 0;
+  margin: 17% auto 0;
+
+  @media (max-width: $width-desktop) {
+    max-width: none;
+    padding: 0 9%;
+    width: 61%;
+    min-width: auto;
+  }
+
+  @media (max-width: $width-laptop) {
+    width: 100%;
+    padding: 0 3%;
+  }
+}
+
+.add-picture__application {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-picture__field {
+  margin-bottom: 4.5%;
+
+  input {
+    cursor: pointer;
+    border: 1px solid #c9ccd4;
+    border-radius: 4px;
+    padding-left: 33px;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #09c3b2;
+    }
+
+    &::placeholder {
+      @include text-sets(15px,24px,normal);
+      color: rgba(#1c1c1c, 0.6);
+    }
+
+  }
+
+  @media (max-width: $width-desktop) {
+    margin-bottom: 5.5%;
+  }
+
+  @media (max-width: $width-laptop) {
+    margin-bottom: 6.1%;
+  }
+}
+
+.add-picture__button {
+  @include set-button-style;
+  display: block;
+
+  @media (max-width: $width-laptop) {
+    margin-bottom: 27px;
+    width: 56%;
+    max-width: 242px;
+  }
+}
+
+.add-picture__down {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  @media (max-width: $width-laptop) {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.add-picture__upload {
+   > label {
+     @include set-button-style;
+     padding: 12px;
+     cursor: pointer;
+     @media (max-width: $width-laptop) {
+       width: 100%;
+     }
+   }
+
+}

@@ -33,3 +33,40 @@
   }
 }
 
+@mixin set-hover($color) {
+  &:hover,
+  &:focus {
+    color: rgba($color, 0.6);
+  }
+
+  &:active {
+    color: rgba($color, 0.3);
+  }
+}
+
+@mixin set-button-style() {
+  @include text-sets(15px,21px,600);
+  color: #000000;
+  background-color: $button-color;
+  padding: 10px;
+
+  @include set-hover(#000000);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: rgba(red($button-color), green($button-color), blue($button-color), 0.6);
+  }
+
+  &:active {
+    outline: none;
+    background-color: rgba(red($button-color), green($button-color), blue($button-color), 0.3);
+  }
+  font-family: inherit;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
