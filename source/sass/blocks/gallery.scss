@@ -19,7 +19,7 @@
     }
   }
 
-  &--drop {
+  &--dragndrop {
     opacity: 0.7;
   }
 }
@@ -37,7 +37,8 @@
 .gallery__image {
   margin-right: 10px;
   margin-bottom: 10px;
-  flex-grow: 1;
+  max-height: 500px;
+  flex-grow: 0.5;
   flex-basis: 210px;
   width: 33.333%;
   position: relative;
@@ -56,6 +57,10 @@
   @media (max-width: $width-desktop) {
     flex-basis: 158px;
     width: 20.333%;
+
+  }
+  @media (max-width: $width-laptop) {
+    flex-grow: 1;
   }
 }
 

@@ -26,7 +26,7 @@
       if (file.type.match(/image.*/)) {
         let reader = new FileReader();
         reader.addEventListener('load', (evt) => {
-          window.gallery.addStart([evt.target.result])
+          window.gallery.addEnd([evt.target.result])
         })
         reader.readAsDataURL(file);
       }

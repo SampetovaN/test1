@@ -16,21 +16,16 @@
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
-    "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "2.6.x",
-    "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
-    "gulp-webp": "^4.0.1",
     "gulp-wrapper": "^1.0.0",
     "merge": "^1.2.1",
-    "postcss-scss": "^2.1.1",
-    "posthtml-include": "^1.4.3"
+    "postcss-scss": "^2.1.1"
   },
   "scripts": {
     "build": "gulp build",
@@ -47,7 +42,6 @@
     "*.js",
     "source/*.html",
     "source/js/**/*.js",
-    "source/img/**/*.svg",
     "source/sass/**/*.scss"
   ],
   "engines": {
