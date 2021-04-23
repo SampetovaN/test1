@@ -7,12 +7,12 @@
   min-width: 700px;
   max-width: 1000px;
   flex-shrink: 0;
-  margin: 17% auto 0;
+  margin: 6% auto 0;
 
   @media (max-width: $width-desktop) {
     max-width: none;
     padding: 0 9%;
-    width: 61%;
+    width: 100%;
     min-width: auto;
   }
 
@@ -81,17 +81,5 @@
     flex-direction: column;
     align-items: center;
   }
-
-}
-
-.add-picture__upload {
-   > label {
-     @include set-button-style;
-     padding: 12px;
-     cursor: pointer;
-     @media (max-width: $width-laptop) {
-       width: 100%;
-     }
-   }
 
 }

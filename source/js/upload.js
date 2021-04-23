@@ -1,30 +1,27 @@
 'use strict';
 
 (function () {
-  let fileChooser = document.querySelector('.add-picture__upload input[type=file]');
-  let uploadIcon = document.querySelector(`.gallery__upload`);
-  const visuallyHiddenClass = `visually-hidden`;
+  let fileChooser = document.querySelector('.upload-picture__field input[type=file]');
   const keyJsonUrls = 'galleryImages';
-  let timeout = null
-  let showUpload = function (fileChooser) {
-    console.log('bfb')
-    let fileReader = new FileReader();
-    uploadIcon.classList.toggle(visuallyHiddenClass);
-    fileReader.onload = (evt) => {
-      timeout = setTimeout(onReaderLoad, 1000, evt);
+  let prevVal = null
+  let onReaderLoad = window.showProcess((evt) => {
+    let sources = JSON.parse(evt.target.result)[keyJsonUrls].map(item => item.url);
+    window.gallery.addStart(sources);
+  })
+  let showUpload = function () {
+    if(prevVal) {
+      prevVal = '';
     }
-    fileReader.readAsText(fileChooser.files.item(0));
-    fileChooser.value = '';
+    let fileReader = new FileReader();
+    window.util.changeIconVisibily();
+    fileReader.addEventListener('load', onReaderLoad);
+    fileReader.readAsText(fileChooser.files[0]);
+    prevVal = fileChooser.value;
   };
 
-  function onReaderLoad(evt){
-    if(timeout > 0) {
-      clearTimeout(timeout)
-    }
-    let sources = JSON.parse(evt.target.result)[keyJsonUrls].map(item => item.url);
-    uploadIcon.classList.toggle(visuallyHiddenClass);
-    window.gallary.add(sources);
-  }
+  fileChooser.addEventListener('change', showUpload);
 
-  fileChooser.addEventListener('change', function (evt) { showUpload(fileChooser,evt)});
+  window.upload = {
+    show: showUpload
+  }
 })();
